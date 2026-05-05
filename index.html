@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+<meta name="theme-color" content="#0b0b0f">
+<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+<title>CardioElectroRM — Formación Avanzada en Electrocardiografía</title>
+<meta name="description" content="El método de 3 pilares del Dr. Rubelin Mosquea para detectar patologías que el 99% de los médicos deja pasar como normales.">
+<meta property="og:title" content="CardioElectroRM — Deja de derivar. Empieza a diagnosticar.">
+<meta property="og:description" content="Formación avanzada en electrocardiografía con el Dr. Rubelin Mosquea.">
+<meta property="og:type" content="website">
+<meta property="og:locale" content="es_AR">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+
+<style>
+*, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
+html {
+  scroll-behavior: smooth;
+  -webkit-text-size-adjust: 100%;
+  text-size-adjust: 100%;
+}
+
+body {
+  font-family: 'Inter', system-ui, -apple-system, sans-serif;
+  background: #0b0b0f;
+  color: #ffffff;
+  min-height: 100vh;
+  -webkit-font-smoothing: antialiased;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+}
+body::before {
+  content: '';
+  position: fixed;
+  inset: 0;
+  background: url('bg-ecg.jpg') center/cover no-repeat;
+  filter: blur(8px) brightness(0.2);
+  transform: scale(1.05);
+  z-index: -1;
+}
+
+::selection {
+  background: rgba(68, 223, 216, 0.2);
+}
+
+/* ═══ LAYOUT ═══ */
+.container {
+  max-width: 760px;
+  margin: 0 auto;
+  padding: 0 24px;
+}
+
+/* ═══ CTA BUTTON ═══ */
+.cta-btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  padding: 20px 56px;
+  background: linear-gradient(180deg, #44dfd8 0%, #38ccc6 100%);
+  color: #0a0a0a;
+  font-family: 'Inter', sans-serif;
+  font-weight: 700;
+  font-size: 1.125rem;
+  border: none;
+  border-radius: 50px;
+  cursor: pointer;
+  transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+  text-decoration: none;
+  letter-spacing: 0.02em;
+  text-transform: uppercase;
+  box-shadow: 0 4px 20px rgba(68, 223, 216, 0.25);
+}
+.cta-btn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 40px rgba(68, 223, 216, 0.4);
+  background: linear-gradient(180deg, #5ee8e1 0%, #44dfd8 100%);
+}
+.cta-btn:active {
+  transform: translateY(0);
+}
+.cta-btn:focus-visible {
+  outline: 2px solid #44dfd8;
+  outline-offset: 3px;
+}
+@media (hover: none) {
+  .cta-btn:active {
+    transform: scale(0.97);
+    box-shadow: 0 2px 10px rgba(68, 223, 216, 0.3);
+  }
+}
+
+
+/* Play button hover */
+.play-icon:hover, button:hover .play-icon {
+  background: rgba(68,223,216,0.2) !important;
+  transform: scale(1.08);
+}
+button:active .play-icon {
+  transform: scale(0.96);
+}
+
+/* Fade up */
+@keyframes fadeUp {
+  from { opacity: 0; transform: translateY(12px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+.fade-up { animation: fadeUp 0.5s ease forwards; }
+
+/* ═══ RESPONSIVE ═══ */
+@media (max-width: 640px) {
+  .cta-btn {
+    font-size: 0.9375rem;
+    padding: 18px 36px;
+    width: 100%;
+    max-width: 360px;
+  }
+  .container { padding: 0 20px; }
+}
+
+/* Safe area for notched devices */
+@supports (padding: env(safe-area-inset-bottom)) {
+  footer { padding-bottom: calc(clamp(16px, 3vh, 24px) + env(safe-area-inset-bottom)); }
+}
+</style>
+</head>
+
+<body>
+
+<!-- ═══════════════════════════════ -->
+<!-- LANDING PAGE                    -->
+<!-- ═══════════════════════════════ -->
+
+<main style="flex: 1; display: flex; flex-direction: column;">
+
+<!-- LOGO -->
+<div style="text-align: center; padding-top: clamp(16px, 3vh, 48px);">
+  <span style="font-family: 'Inter', sans-serif; font-weight: 700; font-size: 1.125rem; color: #ffffff; letter-spacing: -0.02em;">CardioElectro<span style="color: #44dfd8">RM</span></span>
+</div>
+
+<!-- HEADER: Headline + Subheadline -->
+<header class="container" style="padding-top: clamp(16px, 2.5vh, 32px); text-align: center;">
+  <h1 style="font-weight: 500; line-height: 1.2; letter-spacing: -0.03em; color: #ffffff; text-align: center; font-size: clamp(1.5rem, 3.2vw, 2.25rem); max-width: 720px; margin: 0 auto;">
+    Deja de <strong style="font-weight:800">derivar pacientes</strong> y <strong style="font-weight:800">empieza a diagnosticar</strong> dominando el <strong style="font-weight:800;color:#44dfd8">ECG</strong> con solo <strong style="font-weight:800;color:#44dfd8">20 minutos</strong> al día
+  </h1>
+  <p style="margin-top: clamp(12px, 2vh, 20px); font-size: clamp(0.875rem, 1.6vw, 1.0625rem); color: #ffffff; line-height: 1.7; max-width: 580px; margin-left: auto; margin-right: auto; font-weight: 400;">
+    Pasa de <strong style="font-weight: 700;">pedir segundas opiniones</strong> y <strong style="font-weight: 700;">perder pacientes</strong> a detectar las patologías que el <strong style="font-weight: 700;">99%</strong> de los médicos <strong style="font-weight: 700;">deja pasar como normales</strong>.
+  </p>
+</header>
+
+<!-- VSL + CTA -->
+<section style="max-width: 900px; margin: 0 auto; padding: clamp(16px, 2.5vh, 40px) clamp(16px, 4vw, 24px) clamp(16px, 2vh, 32px); width: 100%;">
+
+  <!-- VIDEO -->
+  <div style="position: relative; max-width: 860px; margin: 0 auto; width: 100%;">
+    <!-- Video container -->
+    <div style="aspect-ratio: 16/9; background: #151518; border-radius: clamp(8px, 2vw, 14px); overflow: hidden; position: relative; border: 1px solid rgba(255,255,255,0.06);">
+      <iframe
+        src="https://player.vimeo.com/video/1189511401?badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479"
+        frameborder="0"
+        allow="autoplay; fullscreen; picture-in-picture; clipboard-write; encrypted-media; web-share"
+        referrerpolicy="strict-origin-when-cross-origin"
+        style="position: absolute; inset: 0; width: 100%; height: 100%;"
+        allowfullscreen
+        title="CardioElectroRM">
+      </iframe>
+    </div>
+    <script src="https://player.vimeo.com/api/player.js"></script>
+
+    <!-- CTA below video -->
+    <div style="text-align: center; margin-top: clamp(20px, 3vh, 32px);">
+      <button class="cta-btn" data-tf-popup="Bscuh1Aw" data-tf-size="70" data-tf-medium="snippet">
+        QUIERO DOMINAR EL ECG
+      </button>
+      <p style="margin-top: 10px; font-size: 0.6875rem; color: rgba(255,255,255,0.3); line-height: 1.6;">
+        Con el Dr. Rubelin Mosquea · Cardiólogo Electrofisiólogo<br>
+        Máster en Arritmias · Jefe de la Unidad de Arritmias
+      </p>
+    </div>
+  </div>
+
+</section>
+
+</main>
+
+<!-- DISCLAIMER -->
+<footer role="contentinfo" style="text-align: center; padding: clamp(16px, 3vh, 24px) 20px; border-top: 1px solid rgba(255,255,255,0.05); margin-top: auto;">
+  <p style="font-size: 0.625rem; color: rgba(255,255,255,0.25); max-width: 600px; margin: 0 auto; line-height: 1.6;">
+    Este programa es una formación educativa en electrocardiografía avanzada. Los resultados pueden variar según la dedicación y experiencia previa de cada participante. CardioElectroRM no sustituye el criterio médico profesional. Al inscribirte, aceptás los términos y condiciones del programa. © 2025 CardioElectroRM. Todos los derechos reservados.
+  </p>
+</footer>
+
+
+<!-- Typeform Embed SDK -->
+<script src="//embed.typeform.com/next/embed.js"></script>
+
+</body>
+</html>
